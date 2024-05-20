@@ -24,7 +24,7 @@ interface CategoryBuyPageProps {
 export default async function CategoryBuyPage({ params, searchParams }: CategoryBuyPageProps) {
   return (
     <Container type="main" subType="section">
-      <Heading type="h1">{getTitle(params.category)}</Heading>
+      <Heading type="h1">구매해요 - {getTitle(params.category)}</Heading>
       <Suspense fallback={<CategoryBuyListSkeleton />}>
         <CategoryBuyList params={params} searchParams={searchParams} />
       </Suspense>

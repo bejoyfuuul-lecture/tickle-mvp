@@ -24,7 +24,7 @@ interface CategorySellPageProps {
 export default async function CategorySellPage({ params, searchParams }: CategorySellPageProps) {
   return (
     <Container type="main" subType="section">
-      <Heading type="h1">{getTitle(params.category)}</Heading>
+      <Heading type="h1">판매해요 - {getTitle(params.category)}</Heading>
       <Suspense fallback={<CategorySellListSkeleton />}>
         <CategorySellList params={params} searchParams={searchParams} />
       </Suspense>
